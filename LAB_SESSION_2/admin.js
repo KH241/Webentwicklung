@@ -16,20 +16,24 @@ function showStaff(){
 }
 
 function onAddStudent(){
+	hideContainers();
 	addStudentForm.style.display = "block";
 }
 
 function addStudent(){
 	hideForms();
+	students.style.display = "block";
 	return false;
 }
 
 function onAddStaff(){
+	hideContainers();
 	addStaffForm.style.display = "block";
 }
 
 function addStaff(){
 	hideForms();
+	staff.style.display = "block";
 	return false;
 }
 
@@ -38,9 +42,13 @@ function hideForms(){
 	addStaffForm.style.display = "none";
 }
 
-function hideEverything(){
+function hideContainers(){
 	students.style.display = "none";
 	staff.style.display = "none";
+}
+
+function hideEverything(){
+	hideContainers();
 	hideForms();
 }
 

@@ -7,27 +7,31 @@ const staffPw = "";//"staff";
 var count = 0;
 
 function disableLogin() {
-	var x = document.getElementById("login");
+	var x = document.getElementById("StaffLogin");
 	for (i = 0; i < x.length; i++) {
 		x.elements[i].disabled = true;
+	}
+	
+	var y = document.getElementById("AdminLogin");
+	for (i = 0; i < y.length; i++) {
+		y.elements[i].disabled = true;
 	}
 }
 
 function validateStaffLogin(){
 	form = document.getElementById("StaffLogin");
 	if (form.Username.value == staffName && form.Password.value == staffPw) { return true; }
-	else { return wrongLogin(); }
+	else { wrongLogin(); return false; }
 }
 
 function validateAdminLogin(){
 	form = document.getElementById("AdminLogin");
 	if (form.Username.value == adminName && form.Password.value == adminPw) { return true; }
-	else { return wrongLogin(); }
+	else { wrongLogin(); return false; }
 }
 
 function wrongLogin(){
 	count += 1;
 	if (count > 2) { disableLogin(); }
 	window.alert("Login Credentials Incorrect");
-	return false;
 }
