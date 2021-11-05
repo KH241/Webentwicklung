@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <script src="validation.js"></script>
+</head>
+
+<body>
+    <form class="Login" id="AdminLogin" action="admin.html" onsubmit="return validateAdminLogin()" method="post">
+        <h1>Admin Login</h1><br><br>
+        <label for="Username" method="get">Username</label>
+        <input type="text" name="Username"><br>
+        <label for="Password">Password</label>
+        <input type="password" name="Password"><br>
+        <input type="submit">
+    </form>
+    <form class="Login" id="StaffLogin" action="staff.html" onsubmit="return validateStaffLogin()" method="post">
+        <h1>Staff Login</h1><br><br>
+        <label for="Username" method="get">Username</label>
+        <input type="text" name="Username"><br>
+        <label for="Password">Password</label>
+        <input type="password" name="Password"><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
