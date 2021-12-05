@@ -66,3 +66,18 @@ input, select{
 	color: #124cde;
 	background-color: white;
 }
+
+.FilterContainer{
+	margin-top: 2rem;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.ViewContainer {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+}

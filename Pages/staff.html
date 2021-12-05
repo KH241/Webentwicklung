@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Staff</title>
-	<link rel="stylesheet" type="text/css" href="staff.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-	<div class="Container">
-		<select id="course">
-			<option>Course 1</option>
-		</select>
-		<table class="Table" id="students">
-			<tr>
-				<th>ID</th>
-				<th>First Name</th>
-				<th>Department</th>
-				<th>Email</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>Test</td>
-				<td>Department 1</td>
-				<td>test@student.test</td>
-			</tr>
-		</table>
-	</div>
 
+<head>
+    <title>Staff</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="staff.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="Container">
+        <div class="ViewContainer" id="Students">
+            <div class="FilterContainer">
+                <select class="Filter" name="Department" id="DepartmentSelect" onchange="filterDepartment();">
+                    <option>All</option>
+                    <option>Forestry</option>
+                    <option>Musterstudies</option>
+                    <option>Angewandte Informatik</option>
+                </select>
+                <select class="Filter" name="Semester" id="SemesterSelect" onchange="filterSemester();">
+                    <option>All</option>
+                    <option>Summer</option>
+                    <option>Winter</option>
+                </select>
+            </div>
+            <table class="Table" id="studentTable">
+                <col width="10%" />
+                <col width="20%" />
+                <col width="15%" />
+                <col width="20%" />
+                <col width="20%" />
+                <col width="15%" />
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Date of Birth</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Joined</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Wes</td>
+                    <td>12.12.1972</td>
+                    <td>Forestry</td>
+                    <td>wes@hnee.de</td>
+                    <td>2021-5-5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Max Mustermann</td>
+                    <td>05.02.1982</td>
+                    <td>Musterstudies</td>
+                    <td>max.mustermann@uni.de</td>
+                    <td>2021-12-5</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bill Gates</td>
+                    <td>28.10.1965</td>
+                    <td>Angewandte Informatik</td>
+                    <td>gates@student.us</td>
+                    <td>2021-12-5</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="filter.js"></script>
 </body>
+
+</html>
 </html>
