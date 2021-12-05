@@ -1,18 +1,18 @@
 const adminName = "admin";
-const adminPw = "";//"admin";
+const adminPw = "admin";
 
 const staffName = "staff";
-const staffPw = "";//"staff";
+const staffPw = "staff";
 
 var count = 0;
 
 function disableLogin() {
-	var x = document.getElementById("StaffLogin");
+	let x = document.getElementById("StaffLogin");
 	for (i = 0; i < x.length; i++) {
 		x.elements[i].disabled = true;
 	}
 	
-	var y = document.getElementById("AdminLogin");
+	let y = document.getElementById("AdminLogin");
 	for (i = 0; i < y.length; i++) {
 		y.elements[i].disabled = true;
 	}
