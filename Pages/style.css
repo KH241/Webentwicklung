@@ -21,7 +21,7 @@ body{
 	text-align: center;
 }
 
-input, select{
+input{
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -31,6 +31,21 @@ input, select{
 	box-sizing: border-box;
 	text-align: center;
 	font-size: 14pt;
+}
+
+select{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 14pt;
+	background-color: #124cde;
+	border-color: #124cde;
+	border-radius: 3px;
+	color: white;
+	border-width: 2px;
 }
 
 .Table {
